@@ -1,0 +1,17 @@
+<% if (theme.mathjax){ %>
+    <link rel="stylesheet" href="//unpkg.com/katex@0.16.4/dist/katex.min.css">
+    <script src="//unpkg.com/katex@0.16.4/dist/katex.min.js"></script>
+    <script src="//unpkg.com/katex@0.16.4/dist/contrib/auto-render.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false},
+                    {left: "$\n", right: "\n$", display: false},
+                    {left: "\\(", right: "\\)", display: false}
+                ]
+            });
+        });
+    </script>
+<% } %>
